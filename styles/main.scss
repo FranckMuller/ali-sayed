@@ -1,0 +1,156 @@
+@import './fonts';
+@import './variables';
+@import './base';
+
+// styles
+.main-header {
+  color: $dark;
+  display: grid;
+  grid-template-areas:
+    'hl hl hl hl hl hl hr hr hr';
+  grid-template-columns: repeat(9, 1fr);
+  min-height: 44.6875rem;
+
+  .header-left {
+    grid-area: hl;
+  }
+
+  .header-right {
+    grid-area: hr;
+
+    .menu-button {
+      height: 35px;
+      width: 35px;
+    }
+
+    h1 {
+      padding: 4.3rem 0 4rem;
+      font-size: 2.5rem;
+      line-height: 1.5;
+
+      b,
+      span {
+        display: block;
+      }
+
+      span {
+        font-weight: 400;
+      }
+    }
+
+    p {
+      font-size: 1.125rem;
+
+      &+p {
+        margin-top: 2.2rem;
+      }
+    }
+  }
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-areas:
+    'sk sk sk sk st st st st st'
+    'sk sk sk sk dm dm dm dm dm';
+
+  .skills {
+    grid-area: sk;
+
+    .skills-item {
+      &+.skills-item {
+        margin-top: 4rem;
+      }
+    }
+  }
+
+  .starting {
+    grid-area: st;
+    color: $dark;
+  }
+
+  .dummy {
+    grid-area: dm;
+  }
+}
+
+.main-footer {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-areas:
+    'fl fl fl fr fr fr fr fr fr';
+
+  .footer-left {
+    grid-area: fl;
+    display: grid;
+    align-content: space-between;
+
+    .footer-logo {
+      max-width: 90px;
+      margin-bottom: 2.5rem;
+    }
+
+    .ali-sayed {
+      font-weight: 800;
+      font-size: 2.5rem;
+      text-transform: capitalize;
+
+      span {
+        display: block;
+        font-weight: 400;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .footer-right {
+    grid-area: fr;
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem 1rem;
+      margin-bottom: 5.625rem;
+
+      input {
+        height: 3.125rem;
+      }
+
+      textarea {
+        height: 12.25rem;
+        grid-column: 1 / 3;
+        resize: none;
+      }
+
+      textarea,
+      input {
+        background-color: rgba(52, 95, 97, .2);
+        transition: background-color .3s ease;
+        width: 100%;
+
+        &:focus {
+          background-color: darken(rgba(52, 95, 97, .2), 10%);
+        }
+      }
+    }
+
+    .social-info {
+      .social-icons {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: start;
+        grid-column-gap: .8rem;
+        margin: 1.5rem 0 2.5rem;
+
+        .icon {
+          width: 45px;
+        }
+      }
+    }
+  }
+}
+
+// styles
+
+@import './media';

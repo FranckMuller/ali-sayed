@@ -1,0 +1,199 @@
+@media only screen and (max-width: 1199px) {
+  .content-box {
+    padding: $gutter-lg;
+  }
+
+  h3,
+  .footer-title {
+    font-size: 2.3rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .main-header {
+    min-height: 32rem;
+    grid-template-areas:
+      'hl hl hl hl hl hr hr hr hr';
+
+    .header-right {
+      h1 {
+        padding: 3rem 0 2.8rem;
+      }
+
+      p {
+        &+p {
+          margin-top: 1.8rem;
+        }
+      }
+    }
+  }
+
+  .main-footer {
+    .footer-left {
+      grid-area: fl;
+      display: grid;
+      align-content: space-between;
+
+      .footer-logo {
+        max-width: 80px;
+        margin-bottom: 2.2rem;
+      }
+
+      .ali-sayed {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  :root {
+    font-style: 14px;
+  }
+
+  body {
+    line-height: 1.5;
+  }
+
+  h3,
+  .footer-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .content-box {
+    padding: $gutter-md;
+  }
+
+  .main-header {
+    min-height: 27rem;
+    grid-template-areas:
+      'hl hl hl hl hl hr hr hr hr';
+
+    .header-right {
+      h1 {
+        padding: 2rem 0 1.4rem;
+        font-size: 1.8rem;
+        line-height: 1.4;
+      }
+
+      p {
+        font-size: 1rem;
+
+        &+p {
+          margin-top: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .content-box {
+    padding: 2rem $gutter-sm;
+  }
+
+  .button {
+    height: 2.8rem;
+  }
+
+  .main-header {
+    grid-template-areas:
+      'hl'
+      'hr';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+    .header-left {
+      grid-area: hl;
+      height: 40vh;
+    }
+
+    .header-right {
+      grid-area: hr;
+
+      .menu-button {
+        height: 25px;
+        width: 25px;
+      }
+
+      h1 {
+        padding: 1.52rem 0 1rem;
+      }
+    }
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      'sk'
+      'st'
+      'dm';
+
+    .skills {
+      grid-area: sk;
+
+      .skills-item {
+        &+.skills-item {
+          margin-top: 4rem;
+        }
+      }
+    }
+
+    .starting {
+      grid-area: st;
+      color: $dark;
+    }
+
+    .dummy {
+      grid-area: dm;
+    }
+  }
+
+  .main-footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'fr'
+      'fl';
+
+    .footer-left {
+      .footer-title {
+        margin-bottom: 3rem;
+      }
+
+      .footer-logo {
+        max-width: 60px;
+        margin-bottom: 1.5rem;
+      }
+
+      .ali-sayed {
+        font-size: 2rem;
+      }
+    }
+
+    .footer-right {
+      grid-area: fr;
+
+      form {
+
+        input {
+          height: 2.8rem;
+        }
+
+        textarea {
+          height: 10rem;
+        }
+      }
+
+      .social-info {
+        .social-icons {
+          .icon {
+            width: 35px;
+          }
+        }
+      }
+    }
+  }
+}
